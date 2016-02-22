@@ -38,7 +38,7 @@ BruteForce::Generator.new(filter: ->(word){ word.start_with?('B') })
 BruteForce::Generator.new(starts_from: 'aaaaaaaa')
 ```
 
-3. Retrieve next word
+3. Iterate
 ```ruby
 word = generator.next
 ```
