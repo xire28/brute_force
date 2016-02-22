@@ -30,7 +30,7 @@ Or install it yourself as:
 
 	```ruby
 	#default signature
-	BruteForce::Generator.new(letters: BruteForce::ALPHA_NUMERIC, filter: nil, starts_from: '')
+	BruteForce::Generator.new(letters: BruteForce::ALPHANUMERIC, filter: nil, starts_from: '')
 
 	BruteForce::Generator.new
 	BruteForce::Generator.new(letters: BruteForce::LOWERCASE | ['-'])
@@ -54,7 +54,7 @@ require 'brute_force'
 require 'digest/md5'
 require 'benchmark'
 
-BruteForce::Generator.new(letters: BruteForce::LOWER_ALPHA_NUMERIC | BruteForce::SYMBOL, starts_from: 'lolaaaa').tap do |g|
+BruteForce::Generator.new(letters: BruteForce::LOWER_ALPHANUMERIC | BruteForce::ASCII_SYMBOL, starts_from: 'lolaaaa').tap do |g|
 	target_hash = 'c68ab9687ec94f924c6548671d646e1b'
 	count = 0
 	hr = '-' * 85
@@ -78,20 +78,20 @@ end
 ```
 Status    | Word        | Hash                                  | Number of attempts
 -------------------------------------------------------------------------------------
-Searching | lold4f[     | 043f3b74588a7cd039a73b6590acd0dd      | 1000000
-Searching | lolf~l#     | 8d7d3e5f5091b433421ae171e89763c0      | 2000000
-Searching | loli^rj     | 84c5997b9d3ebc71c7a9010ed161a37c      | 3000000
-Searching | loll>x      | 40777367a79b9644702a03addf130542      | 4000000
-Searching | lolo."-     | e8e72e1eea1f1315bf5f622da7241354      | 5000000
-Searching | lolr((t     | 5dddefb07d81393a535da22d6a809ff0      | 6000000
-Searching | lolu".9     | 827e73d722c4631623a1ff8e973d1072      | 7000000
-Searching | lolxw=[     | 1269a5f1e373f6882f4aa9df61ff5153      | 8000000
-Searching | lol q]#     | 979dfab06b4c4b0c804bd81736052c4e      | 9000000
-Searching | lol#k}j     | e30345d498bef4aeaf6a5733d42e199d      | 10000000
+Searching | lolc| )     | 40f14259308d216d91332fd1598b5998      | 1000000
+Searching | lolf/_a     | f05b19bfe63fac31107a000bbe7adfa9      | 2000000
+Searching | loli!i*     | a5f4c6425ec7e8e2126e008f7ae5b920      | 3000000
+Searching | lollm)b     | 716555993d324cefc0ff7a6d4d8bf83a      | 4000000
+Searching | lolo80+     | 670b92da3b79d23fc7162b0afdc5bc2b      | 5000000
+Searching | lolq`rc     | 2a3a3e607480640e3ead5490d3388f8e      | 6000000
+Searching | lolt-;,     | 1a90f2fde019f2e024e5940d08e26772      | 7000000
+Searching | lolwz9d     | 22f9a3c1139d85becfbccc4a2d89d1e3      | 8000000
+Searching | lolzkz-     | 6e1ceb0549bb2c535b0686c14a60ac43      | 9000000
+Searching | lol"5^e     | 8da39ab9f8d8a021df908a0bfa5093db      | 10000000
 -------------------------------------------------------------------------------------
-Found     | lol$123     | c68ab9687ec94f924c6548671d646e1b      | 10245334
+Found     | lol$123     | c68ab9687ec94f924c6548671d646e1b      | 10691387
 -------------------------------------------------------------------------------------
- 71.234000   0.000000  71.234000 ( 71.357751)
+ 73.062000   0.000000  73.062000 ( 73.156629)
 ```
 
 ## Development
