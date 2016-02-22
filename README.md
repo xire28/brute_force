@@ -21,27 +21,29 @@ Or install it yourself as:
 ## Usage
 
 1. Require the gem
-```ruby
-require 'brute_force'
-```
+
+	```ruby
+	require 'brute_force'
+	```
 
 2. Create an instance of the generator
 
-```ruby
-#default signature
-BruteForce::Generator.new(letters: BruteForce::ALPHA_NUMERIC, filter: nil, starts_from: '')
+	```ruby
+	#default signature
+	BruteForce::Generator.new(letters: BruteForce::ALPHA_NUMERIC, filter: nil, starts_from: '')
 
-BruteForce::Generator.new
-BruteForce::Generator.new(letters: BruteForce::LOWERCASE | ['-'])
-BruteForce::Generator.new(filter: /\A.*?B\Z/)
-BruteForce::Generator.new(filter: ->(word){ word.start_with?('B') })
-BruteForce::Generator.new(starts_from: 'aaaaaaaa')
-```
+	BruteForce::Generator.new
+	BruteForce::Generator.new(letters: BruteForce::LOWERCASE | ['-'])
+	BruteForce::Generator.new(filter: /\A.*?B\Z/)
+	BruteForce::Generator.new(filter: ->(word){ word.start_with?('B') })
+	BruteForce::Generator.new(starts_from: 'aaaaaaaa')
+	```
 
 3. Iterate
-```ruby
-word = generator.next
-```
+
+	```ruby
+	word = generator.next
+	```
 
 ####Example
 
