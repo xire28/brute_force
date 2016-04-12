@@ -18,22 +18,23 @@ module BruteForce
 	ALL = CONTROL | ALPHANUMERIC | ASCII_SYMBOL | ASCII_EXTENDED | UNICODE
 
 	class Generator
-		def initialize(letters: ALPHANUMERIC, filter: nil, starts_from: '')
+		def initialize(letters: ALPHANUMERIC, filter: nil, starts_from: '', step: 1)
 			self.letters = letters
 			self.filter = filter
 			self.counter = word_to_number(starts_from)
+			self.step = step
 		end
 
 		def next
 			begin
 				word = number_to_word(self.counter)
-				self.counter+=1
-			end while not allowed?(word)
+				self.counter+=step
+			end until allowed?(word)
 			word
 		end
 
 		protected
-		attr_accessor :letters, :filter, :counter
+		attr_accessor :letters, :filter, :counter, :step
 
 		def word_to_number(word)
 			word.split('').map{|code| letters.find_index(code)}.b(letters.length).to_i
