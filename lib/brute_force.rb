@@ -33,9 +33,9 @@ module BruteForce
 			word
 		end
 
-		protected
 		attr_accessor :letters, :filter, :counter, :step
 
+		protected
 		def word_to_number(word)
 			word.split('').map{|code| letters.find_index(code)}.b(letters.length).to_i
 		end
