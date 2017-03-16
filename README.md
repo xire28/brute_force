@@ -45,7 +45,7 @@ Or install it yourself as:
 	word = generator.next
 	```
 
-###Example
+### Example
 
 ```ruby
 require 'brute_force'
