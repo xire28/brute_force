@@ -47,8 +47,6 @@ Or install it yourself as:
 
 ####Example
 
-#####Code
-
 ```ruby
 require 'brute_force'
 require 'digest/md5'
@@ -74,7 +72,7 @@ BruteForce::Generator.new(letters: BruteForce::LOWER_ALPHANUMERIC | BruteForce::
 end
 ```
 
-#####Output
+####Output
 ```
 Status    | Word        | Hash                                  | Number of attempts
 -------------------------------------------------------------------------------------
