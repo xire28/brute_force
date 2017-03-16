@@ -45,7 +45,7 @@ Or install it yourself as:
 	word = generator.next
 	```
 
-####Example
+###Example
 
 ```ruby
 require 'brute_force'
@@ -72,7 +72,6 @@ BruteForce::Generator.new(letters: BruteForce::LOWER_ALPHANUMERIC | BruteForce::
 end
 ```
 
-####Output
 ```
 Status    | Word        | Hash                                  | Number of attempts
 -------------------------------------------------------------------------------------
